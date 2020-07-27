@@ -139,6 +139,7 @@ header {
   width: 90%;
   margin: 1.5rem auto;
   padding-bottom: 1.2rem;
+  border-bottom: 8px solid white;
 }
 
 h1 {
@@ -148,6 +149,7 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+  color: white;
 }
 
 nav a {
@@ -172,14 +174,10 @@ span a:hover {
   display: flex;
   width: 80%;
   margin: 2rem auto;
-  background: white;
   padding: 3rem;
   justify-content: space-around;
 }
-.content p,
-h2 {
-  color: rgb(255, 90, 96);
-}
+
 .flexbox {
   display: flex;
   flex-direction: column;
@@ -200,10 +198,16 @@ button {
   background-color: rgb(255, 90, 96);
   color: white;
   font-weight: bold;
-  border: none;
+  font-size: 1.2rem;
+  border: 2px solid white;
   border-radius: 0.5rem;
   padding: 1rem 1.2rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  box-shadow: -5px 5px black;
+}
+
+button:hover {
+  animation-name: grow;
 }
 
 .card-content {
@@ -232,8 +236,6 @@ button {
 /*About styles*/
 
 .container {
-  /*background: url("https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80")
-    no-repeat center/cover; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
