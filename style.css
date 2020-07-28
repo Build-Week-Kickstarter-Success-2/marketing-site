@@ -132,6 +132,9 @@ body {
   font-family: "Mulish", sans-serif;
   background: rgb(255, 90, 96);
 }
+
+/* header/nav styles*/
+
 header {
   display: flex;
   justify-content: space-between;
@@ -140,6 +143,11 @@ header {
   margin: 1.5rem auto;
   padding-bottom: 1.2rem;
   border-bottom: 8px solid white;
+}
+
+header img {
+  height: 4rem;
+  width: 4rem;
 }
 
 h1 {
@@ -152,6 +160,16 @@ h2 {
   color: white;
 }
 
+h3 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+h4 {
+  font-size: 1.3rem;
+  color: rgb(255, 90, 96);
+}
+
 nav a {
   margin-left: 2rem;
   text-decoration: none;
@@ -162,13 +180,18 @@ nav a:hover {
   font-weight: bold;
   font-size: 1.2rem;
 }
+
 span {
   font-weight: bold;
+  border-bottom: 2px solid white;
+  font-size: 1.1rem;
 }
 
 span a:hover {
   font-size: inherit;
 }
+
+/* main content styles*/
 
 .content {
   display: flex;
@@ -176,61 +199,94 @@ span a:hover {
   margin: 2rem auto;
   padding: 3rem;
   justify-content: space-around;
+  align-items: center;
 }
 
 .flexbox {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-basis: 60%;
+  align-items: flex-start;
+  flex-basis: 40%;
 }
-.piggy {
-  height: 10rem;
-  width: 15rem;
-}
-.house {
-  height: 10rem;
-  width: 10rem;
+.flexbox p {
+  text-align: left;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
 }
 
 button {
   background-color: rgb(255, 90, 96);
   color: white;
   font-weight: bold;
-  font-size: 1.2rem;
-  border: 2px solid white;
+  font-size: 1.5rem;
+  border: 4px solid white;
   border-radius: 0.5rem;
-  padding: 0.5rem 1.2rem;
+  padding: 0.7rem 1.7rem;
   margin-top: 2rem;
-  box-shadow: -5px 5px black;
+}
+
+/* animation for button */
+
+@keyframes btnHover {
+  from {
+    background: rgb(255, 90, 96);
+    color: white;
+  }
+  to {
+    background: white;
+    color: rgb(255, 90, 96);
+  }
 }
 
 button:hover {
-  animation-name: grow;
+  animation-name: btnHover;
+  animation-duration: 2s;
 }
+
+/* bottom cards section */
 
 .card-content {
   display: flex;
+  flex-wrap: wrap;
   width: 80%;
   margin: 0 auto;
   justify-content: space-between;
+  padding-top: 3rem;
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   flex-basis: 20%;
-  padding: 1rem 0;
+  padding: 5rem 1rem;
   border: 2px solid black;
   border-radius: 1rem;
   background: white;
 }
 
+.wrapper p {
+  color: black;
+}
+
 .wrapper:hover {
   margin-top: -1rem;
   margin-bottom: 1rem;
+}
+
+/*footer styles/nav*/
+
+footer nav {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  margin: 2rem auto 0.5rem auto;
+  padding: 1rem 0;
+}
+
+footer nav a:hover {
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 /*About styles*/
@@ -299,18 +355,7 @@ p {
   color: rgb(255, 90, 96);
 }
 
-footer nav {
-  display: flex;
-  width: 70%;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 1rem 0;
-}
-
-footer nav a:hover {
-  font-weight: bold;
-  font-size: 1rem;
-}
+/* media queries for responsiveness*/
 
 @media (max-width: 1200px) {
   .container {
