@@ -195,16 +195,21 @@ span a:hover {
 
 .content {
   display: flex;
-  flex-basis: 70%;
+  width: 80%;
   margin: 2rem auto;
   padding: 3rem;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .content img {
   height: 20rem;
   width: 30rem;
+}
+
+.triangle img {
+  height: 25rem;
+  width: 25rem;
 }
 
 .flexbox {
@@ -221,7 +226,6 @@ span a:hover {
 .circle-pics {
   display: flex;
   justify-content: center;
-  flex-basis: 30%;
 }
 
 .circle-pics img {
@@ -395,7 +399,7 @@ p {
     font-size: 100%;
   }
   .content {
-    flex-basis: 90%;
+    flex-basis: 80%;
     justify-content: space-between;
   }
   .card-content {
@@ -414,6 +418,9 @@ p {
   .one {
     margin-left: 1rem;
   }
+  .two {
+    justify-content: flex-end;
+  }
 
   .flexbox p {
     text-align: left;
@@ -422,7 +429,7 @@ p {
   }
 
   .content {
-    flex-basis: 90%;
+    width: 90%;
     margin: 2rem auto;
     padding: 3rem;
   }
@@ -442,9 +449,6 @@ p {
   }
   .wrapper {
     flex-basis: 20%;
-  }
-  .circle-pics {
-    flex-basis: 50%;
   }
 }
 
@@ -470,7 +474,11 @@ p {
     padding: 0.6rem 1.4rem;
     margin-top: 1rem;
   }
-
+  .content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
   .content img {
     height: 14rem;
     width: 21rem;
@@ -505,8 +513,7 @@ p {
 
   .content {
     flex-direction: column;
-    margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
   }
   .content img {
     height: 10rem;
