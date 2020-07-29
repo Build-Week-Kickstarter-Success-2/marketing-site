@@ -166,8 +166,10 @@ h3 {
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: rgb(255, 90, 96);
+  font-weight: bold;
+  text-align: center;
 }
 
 nav a {
@@ -207,37 +209,41 @@ span a:hover {
   width: 30rem;
 }
 
-.triangle img {
-  height: 25rem;
-  width: 25rem;
+.middle-content {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .flexbox {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex-basis: 50%;
+  justify-content: center;
+  flex-basis: 60%;
 }
+.one {
+  margin-left: 2rem;
+}
+
+.two {
+  justify-content: flex-start;
+}
+.flexbox-pics {
+  padding-left: 3rem;
+  margin-bottom: 2rem;
+}
+.flexbox-pics img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 6rem;
+}
+
 .flexbox p {
   text-align: left;
   line-height: 1.5rem;
   letter-spacing: 0.1rem;
-}
-.circle-pics {
-  display: flex;
-  justify-content: center;
-}
-
-.circle-pics img {
-  height: 12rem;
-  width: 12rem;
-  border-radius: 6rem;
-  margin: 1rem 1rem 0 0;
-}
-
-.circle-pics .triangle {
-  margin-left: 100%;
-  margin-bottom: -1rem;
 }
 
 button {
@@ -272,17 +278,17 @@ button a {
 button:hover {
   animation-name: btnHover;
   animation-duration: 2s;
+  background: white;
+  color: rgb(255, 90, 96);
 }
 
 /* bottom cards section */
 
 .card-content {
   display: flex;
-  flex-wrap: wrap;
   width: 80%;
   margin: 0 auto;
-  justify-content: space-between;
-  padding-top: 1.5rem;
+  justify-content: space-around;
 }
 
 .wrapper {
@@ -290,10 +296,21 @@ button:hover {
   flex-direction: column;
   align-items: center;
   flex-basis: 20%;
-  padding: 4rem 0;
+  padding: 1rem 1.5rem;
   border: 2px solid black;
   border-radius: 1rem;
   background: white;
+}
+
+.change {
+  background: url("https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=995&q=80")
+    center/cover;
+}
+
+.vacancy {
+  text-shadow: 2px 1px white;
+  background: url("https://images.unsplash.com/photo-1530036846422-afb4b7af2fd4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80")
+    center/cover;
 }
 
 .wrapper p {
@@ -352,11 +369,6 @@ p {
   text-shadow: 2px 1px black;
 }
 
-.isaiah {
-  height: 7rem;
-  width: 19rem;
-}
-
 .card img {
   height: 7rem;
   width: 7rem;
@@ -406,20 +418,19 @@ p {
     width: 90%;
   }
 
+  .flexbox-pics img {
+    height: 8rem;
+    width: 8rem;
+  }
+
   .flexbox p {
     line-height: 1.2rem;
-  }
-  .wrapper {
-    flex-basis: 10%;
   }
 }
 
 @media (max-width: 1000px) {
   .one {
     margin-left: 1rem;
-  }
-  .two {
-    justify-content: flex-end;
   }
 
   .flexbox p {
@@ -438,18 +449,6 @@ p {
     height: 16rem;
     width: 24rem;
   }
-
-  .circle-pics img {
-    height: 10rem;
-    width: 10rem;
-    border-radius: 6rem;
-  }
-  .card-content {
-    width: 100%;
-  }
-  .wrapper {
-    flex-basis: 20%;
-  }
 }
 
 @media (max-width: 800px) {
@@ -466,6 +465,11 @@ p {
 
   .flexbox p {
     line-height: 1rem;
+  }
+
+  .flexbox-pics img {
+    height: 5rem;
+    width: 5rem;
   }
   button {
     font-size: 1.2rem;
@@ -484,9 +488,8 @@ p {
     width: 21rem;
   }
 
-  .circle-pics img {
-    height: 8rem;
-    width: 8rem;
+  .card-content {
+    margin-top: 2rem;
   }
 
   .card {
@@ -520,20 +523,28 @@ p {
     width: 15rem;
     margin-bottom: 1rem;
   }
-
-  .two {
+  .middle-content {
     flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
   }
-
-  .circle-pics img {
-    height: 6rem;
-    width: 6rem;
-  }
-
   .flexbox {
     flex-basis: 40%;
     margin-bottom: 1rem;
     justify-content: center;
+  }
+
+  .card-content {
+    flex-direction: column;
+  }
+
+  .wrapper:hover {
+    margin: 0;
+  }
+
+  .change,
+  .vacancy {
+    background: white;
   }
 
   h3 {
@@ -553,11 +564,6 @@ p {
     height: 10rem;
     width: 15rem;
     margin-bottom: 1rem;
-  }
-
-  .circle-pics img {
-    height: 6rem;
-    width: 6rem;
   }
 
   .card img {
